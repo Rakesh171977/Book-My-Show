@@ -81,7 +81,7 @@ pipeline {
                     kubectl apply -f service.yml
 
                     echo "✅ Waiting for deployment rollout..."
-                    kubectl rollout status deployment/bms-deployment --timeout=120s
+                    kubectl rollout status deployment/bms-app --timeout=120s
 
                     echo "✅ Verifying running pods and service..."
                     kubectl get pods -o wide
